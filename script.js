@@ -1,3 +1,23 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const preloader = document.getElementById("preloader");
+    const progressBarFill = document.getElementById("progressBarFill");
+    const progressPercentage = document.getElementById("progressPercentage");
+
+    let progress = 0;
+
+    const interval = setInterval(() => {
+        if (progress < 100) {
+            progress += 2;
+            progressBarFill.style.width = `${progress}%`;
+            progressPercentage.textContent = `${progress}%`;
+        } else {
+            clearInterval(interval);
+            preloader.classList.add("hidden");
+        }
+    }, 25);
+});
+
+
 // Открытие модального окна
 const openModal = document.getElementById('openModal');
 const closeModal = document.getElementById('closeModal');

@@ -1,9 +1,65 @@
+:root {
+    --main-color: #f07;
+}
+
+
 body {
     background: #000000;
     margin: 0;
     width: 100%;
-    color: rgb(34, 197, 94);
+    color: var(--main-color);
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    box-sizing: border-box;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.progress-bar {
+    width: 300px;
+    background: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    height: 20px;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: var(--main-color);
+    width: 0%;
+    transition: width 0.1s ease;
+}
+
+.progress-percentage {
+    margin-top: 10px;
+    font-size: 18px;
+    color: var(--main-color);
+}
+
+.progress-bar_bottom {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 15px;
+}
+
+.hidden {
+    display: none;
 }
 
 .main-title {
@@ -24,9 +80,16 @@ body {
     }
 }
 
-.frame {
+.frame-wrapper {
     position: relative;
+}
+
+.frame {
     white-space: pre;
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+    font-size: 1em;
+    margin: 0;
 }
 
 button {
@@ -35,8 +98,8 @@ button {
     cursor: pointer;
     background: #000000;
     border-radius: 10px;
-    color: rgb(34, 197, 94);
-    border: 1px solid rgb(34, 197, 94);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
 }
 
 /* Фон модального окна */
@@ -64,7 +127,7 @@ button {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     animation: fadeIn 0.3s ease;
-    border: 1px solid rgb(34, 197, 94);
+    border: 1px solid var(--main-color);
 }
 
 /* Анимация появления */
@@ -86,7 +149,7 @@ button {
     right: 15px;
     font-size: 24px;
     font-weight: bold;
-    color: rgb(34, 197, 94);
+    color: var(--main-color);
     cursor: pointer;
 }
 
@@ -107,9 +170,9 @@ button {
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: rgb(34, 197, 94);
+    background: var(--main-color);
     bottom: 46px;
-    right: 236px;
+    right: 215px;
     animation: point-1 6.3s linear infinite;
 }
 
@@ -117,43 +180,43 @@ button {
 @keyframes point-1 {
     10% {
         bottom: 60px;
-        right: 236px;
+        right: 215px;
     }
     20% {
         bottom: 60px;
-        right: 244px;
+        right: 222px;
     }
     30% {
         bottom: 60px;
-        right: 252px;
+        right: 230px;
     }
     40% {
         bottom: 75px;
-        right: 252px;
+        right: 230px;
     }
     50% {
         bottom: 90px;
-        right: 252px;
+        right: 230px;
     }
     60% {
         bottom: 75px;
-        right: 252px;
+        right: 230px;
     }
     70% {
         bottom: 60px;
-        right: 252px;
+        right: 230px;
     }
     80% {
         bottom: 60px;
-        right: 244px;
+        right: 222px;
     }
     90% {
         bottom: 60px;
-        right: 236px;
+        right: 215px;
     }
     100% {
         bottom: 46px;
-        right: 236px;
+        right: 215px;
     }
 }
 
