@@ -257,6 +257,44 @@ button {
     }
 }
 
+.bartender {
+    position: absolute;
+    font-size: 12px;
+    bottom: 60px;
+    left: 10px;
+    background: #000000;
+    animation: bartender 10s linear infinite;
+    cursor: pointer;
+
+}
+
+.bartender_dot {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--main-color);
+    cursor: pointer;
+
+}
+
+@keyframes bartender {
+    0% {
+        left: 10px;
+    }
+    50% {
+        left: 240px;
+    }
+    100% {
+        left: 10px;
+    }
+
+    
+}
+
 .error {
     display: none;
     text-align: center;
