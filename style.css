@@ -123,7 +123,7 @@ button {
     padding: 20px;
     border-radius: 8px;
     width: 800px;
-    min-height: 400px;
+    min-height: 500px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     animation: fadeIn 0.3s ease;
@@ -165,58 +165,95 @@ button {
 }
 
 
-.point-1 {
+.cooker {
     position: absolute;
+    font-size: 12px;
+    top: 46px;
+    right: 215px;
+    background: #000000;
+    animation: cooker 22.3s linear infinite;
+    cursor: pointer;
+}
+
+.cooker_dot {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 7px;
     height: 7px;
     border-radius: 50%;
     background: var(--main-color);
-    bottom: 46px;
-    right: 215px;
-    animation: point-1 6.3s linear infinite;
+    cursor: pointer;
 }
 
-
-@keyframes point-1 {
-    10% {
-        bottom: 60px;
-        right: 215px;
-    }
-    20% {
-        bottom: 60px;
-        right: 222px;
+@keyframes cooker {
+    15% {
+        top: 46px;
+        right: 50px;
     }
     30% {
-        bottom: 60px;
-        right: 230px;
-    }
-    40% {
-        bottom: 75px;
-        right: 230px;
-    }
-    50% {
-        bottom: 90px;
-        right: 230px;
+        top: 200px;
+        right: 50px;
+    }    
+    45% {
+        top: 200px;
+        right: 275px;
     }
     60% {
-        bottom: 75px;
-        right: 230px;
+        top: 120px;
+        right: 275px;
     }
-    70% {
-        bottom: 60px;
-        right: 230px;
-    }
-    80% {
-        bottom: 60px;
-        right: 222px;
-    }
-    90% {
-        bottom: 60px;
+    75% {
+        top: 120px;
         right: 215px;
     }
     100% {
-        bottom: 46px;
+        top: 46px;
         right: 215px;
+    }
+}
+
+.waiter {
+    position: absolute;
+    font-size: 12px;
+    top: 46px;
+    left: 215px;
+    background: #000000;
+    animation: waiter 20.3s linear infinite;
+    cursor: pointer;
+
+}
+
+.waiter_dot {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--main-color);
+    cursor: pointer;
+
+}
+
+@keyframes waiter {
+    25% {
+        top: 46px;
+        left: 650px;
+    }
+    50% {
+        top: 160px;
+        left: 650px;        
+    }    
+    75% {
+        top: 160px;
+        left: 215px;         
+    }
+    100% {
+        top: 46px;
+        left: 215px;            
     }
 }
 

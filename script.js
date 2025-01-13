@@ -26,10 +26,15 @@ const modalText = document.getElementById('modalText');
 
 // Текст для эффекта печати
 const text = [
-    "Это первая строка текста.",
-    "Это вторая строка текста.",
-    "А вот и третья строка текста.",
-    "Наконец, четвертая строка."
+    "Activating Reservation System: Tables are being prepared...",
+"Connecting Kitchen Operations: Chef commands online...",
+"Loading Customer Insights: Preferences detected...",
+"Calibrating Atmosphere Settings: Ambience adjusted...",
+"Activating Feedback Collector: Ready to gather reviews...",
+"Syncing Payment Systems: Secure transactions enabled...",
+"Updating Inventory Module: Stock levels checked...",
+"Finalizing Staff Coordination: Shift schedules confirmed...",
+"System Ready: Welcome to your ultimate restaurant assistant!",
 ];
 
 let intervalId; // Идентификатор для очистки цикла
