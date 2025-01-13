@@ -100,6 +100,27 @@ button {
     border-radius: 10px;
     color: var(--main-color);
     border: 1px solid var(--main-color);
+    transition: all 0.3s ease-in;
+}
+
+button:hover,
+.connect-btn:hover  {
+    transform: scale(1.2);
+}
+
+.connect-btn {
+    display: block;
+    width: fit-content;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    background: var(--main-color);
+    border-radius: 10px;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease-in;
 }
 
 /* Фон модального окна */
@@ -128,6 +149,12 @@ button {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     animation: fadeIn 0.3s ease;
     border: 1px solid var(--main-color);
+}
+
+.modalPerson .modal-content {
+    width: 500px;
+    min-height: 200px;
+    line-height: 1.2;
 }
 
 /* Анимация появления */

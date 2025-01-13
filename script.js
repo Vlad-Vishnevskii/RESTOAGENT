@@ -17,6 +17,51 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 25);
 });
 
+const modalPerson = document.getElementById('modalPerson');
+const modalTitlePerson = modalPerson.querySelector('h2');
+const modalTextPerson = modalPerson.querySelector('p');
+const closeModalPerson = modalPerson.querySelector('.close-button');
+const clickableElements = document.querySelectorAll('.clickable');
+
+closeModalPerson.addEventListener('click', () => {
+    modalPerson.style.display = 'none';
+    modalTextPerson.textContent = "";
+});
+
+
+clickableElements.forEach(element => {
+    element.addEventListener('click', () => {
+        const personType = element.getAttribute('data-person');
+        modalTitlePerson.textContent = personType.toUpperCase();
+        // Устанавливаем текст модалки в зависимости от data-person
+        switch (personType) {
+            case 'cooker':
+                modalTextPerson.textContent = 'This is the chef, the mastermind behind our delicious dishes. They bring creativity and skill to every plate, ensuring each bite is a memorable experience.';
+                 break;
+            case 'waiter':
+                modalTextPerson.textContent = 'This is your friendly waiter, always ready to take your order and make your dining experience comfortable and enjoyable. They ensure everything runs smoothly from the kitchen to your table.';
+                break;
+            case 'bartender':
+                modalTextPerson.textContent = 'This is our bartender, the expert in crafting your favorite drinks. Whether you prefer a classic cocktail or a modern mix, they have the skills to make your drink just right.';
+                break;
+            default:
+                modalTextPerson.textContent = 'unknown';
+        }
+
+        // Показываем модалку
+        modalPerson.style.display = 'flex';
+    });
+});
+
+window.addEventListener('click', (e) => {
+    if (e.target === modalPerson) {
+        modalPerson.style.display = 'none';
+        modalTitlePerson.textContent = ""; // Очистка текста при закрытии
+        modalTextPerson.textContent = "";
+    }
+});
+
+
 
 // Открытие модального окна
 const openModal = document.getElementById('openModal');
@@ -26,7 +71,7 @@ const modalText = document.getElementById('modalText');
 
 // Текст для эффекта печати
 const text = [
-    "Activating Reservation System: Tables are being prepared...",
+"Activating Reservation System: Tables are being prepared...",
 "Connecting Kitchen Operations: Chef commands online...",
 "Loading Customer Insights: Preferences detected...",
 "Calibrating Atmosphere Settings: Ambience adjusted...",

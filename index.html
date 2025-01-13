@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>T</title>
+    <title>RESTOAGENT</title>
 </head>
 <body>
     <div class="preloader" id="preloader">
@@ -63,15 +63,16 @@
 |################################################ |                                                  |   === === === === === === === === === === ===     |
 +-------------------------------------------------+--------------------------------------------------+---------------------------------------------------+
             </pre>
-            <div class="cooker">cooker <span class="cooker_dot"></span></div>
-            <div class="waiter">waiter <span class="waiter_dot"></span></div>
-            <div class="bartender">bartender <span class="bartender_dot"></span></div>
+            <div data-person="cooker" class="cooker clickable">cooker <span class="cooker_dot"></span></div>
+            <div data-person="waiter" class="waiter clickable">waiter <span class="waiter_dot"></span></div>
+            <div data-person="bartender" class="bartender clickable">bartender <span class="bartender_dot"></span></div>
         </div>
 
     <!-- Кнопка для открытия модального окна -->
     <button id="openModal">Advanced</button>
 
     <div class="container">
+        <a class="connect-btn" href="#">Connect</a>
         <p class="balance">Balance: Loading...</p>
     </div>
 
@@ -80,8 +81,17 @@
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close-button" id="closeModal">&times;</span>
-            <h2>Welcome to RESTOAGENT Synchronization complete...</h2>
+            <h2 class="title">Welcome to RESTOAGENT Synchronization complete...</h2>
             <div id="modalText"></div>
+
+        </div>
+    </div>
+
+    <div id="modalPerson" class="modal modalPerson">
+        <div class="modal-content">
+            <span class="close-button" id="closeModalPerson">&times;</span>
+            <h2>title</h2>
+            <p>description</p>
         </div>
     </div>
 
