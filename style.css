@@ -198,7 +198,7 @@ button:hover,
     top: 46px;
     right: 215px;
     background: #000000;
-    animation: cooker 22.3s linear infinite;
+    animation: cooker 35.3s linear infinite;
     cursor: pointer;
 }
 
@@ -247,7 +247,7 @@ button:hover,
     top: 46px;
     left: 215px;
     background: #000000;
-    animation: waiter 20.3s linear infinite;
+    animation: waiter 35.3s linear infinite;
     cursor: pointer;
 
 }
@@ -290,7 +290,7 @@ button:hover,
     bottom: 60px;
     left: 10px;
     background: #000000;
-    animation: bartender 10s linear infinite;
+    animation: bartender 20s linear infinite;
     cursor: pointer;
 
 }
