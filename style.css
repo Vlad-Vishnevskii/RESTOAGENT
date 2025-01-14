@@ -92,18 +92,27 @@ body * {
     margin: 0;
 }
 
-button {
+button,
+.link {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    font-weight: bold;
     background: #000000;
     border-radius: 10px;
     color: var(--main-color);
     border: 1px solid var(--main-color);
     transition: all 0.3s ease-in;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 button:hover,
+.link:hover {
+    background: var(--main-color);
+    color: #000000;
+}
+
 .connect-btn:hover  {
     transform: scale(1.2);
 }
